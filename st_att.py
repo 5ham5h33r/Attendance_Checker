@@ -29,7 +29,7 @@ def calculate_attendance(subjects, text):
     # Iterate through subjects and count attendance for each
     for subject in subjects:
         # Regular expression pattern to find lines containing the subject followed by "P" or "U"
-        pattern = fr"\d+\s+70092000111\s+{re.escape(subject)}.*[PU]"
+        pattern = fr"\d+\s+[0-9]{{11}}\s+{re.escape(subject)}.*[PU]"
 
         # Find all matches for the current subject
         matches = re.findall(pattern, text)
