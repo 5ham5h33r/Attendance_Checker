@@ -90,14 +90,19 @@ def main():
             "MLOps",
             "Neural Networks and Deep Learning",
             "Speech and NLP",
+            "Management Through Movies",
+            "Contemporary Short Fiction",
+            "Leading through Life Skills"
         ]
 
-        if "Management Through Movies" in text:
-            subjects_to_check.append("Management Through Movies")
-        if "Contemporary Short Fiction" in text:
-            subjects_to_check.append("Contemporary Short Fiction")
-        if "Leading through Life Skills" in text:
-            subjects_to_check.append("Leading through Life Skills")
+        subjects_to_check = [subject for subject in subjects_to_check if subject in text]
+
+        # if "Management Through Movies" in text:
+        #     subjects_to_check.append("Management Through Movies")
+        # if "Contemporary Short Fiction" in text:
+        #     subjects_to_check.append("Contemporary Short Fiction")
+        # if "Leading through Life Skills" in text:
+        #     subjects_to_check.append("Leading through Life Skills")
         
         # Call the calculate_attendance function
         attendance_results = calculate_attendance(subjects_to_check, text)
