@@ -87,12 +87,18 @@ def main():
             "Big Data Analytics",
             "Advanced DBMS",
             "DevOps",
-            "Management Through Movies",
             "MLOps",
             "Neural Networks and Deep Learning",
             "Speech and NLP",
         ]
 
+        if "Management Through Movies" in text:
+            subjects_to_check.append("Management Through Movies")
+        if "Contemporary Short Fiction" in text:
+            subjects_to_check.append("Contemporary Short Fiction")
+        if "Leading through Life Skills" in text:
+            subjects_to_check.append("Leading through Life Skills")
+        
         # Call the calculate_attendance function
         attendance_results = calculate_attendance(subjects_to_check, text)
 
