@@ -92,7 +92,8 @@ def main():
             "Speech and NLP",
             "Management Through Movies",
             "Contemporary Short Fiction",
-            "Leading through Life Skills"
+            "Leading through Life Skills",
+            "Film Appreciation",
         ]
 
         subjects_to_check = [subject for subject in subjects_to_check if subject in text]
